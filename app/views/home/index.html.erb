@@ -5,7 +5,20 @@
     <h3 class="panel-title"><%= link_to 'Click here to generate Superhero', root_path%></h3>
   </div>
   <div class="panel-body">
-    Panel content
+    Your superhero name is: <br/>
+    <%= @hero_name %>
+    <br/>
+    Your superpower is: <br/>
+    <%= @hero_power %>
+    <br/>
+
+    Your undercover day job is: <br/>
+    <%= @corp_title  %>
+    <br/>
+    Your corporate superpower is: <br/>
+    <%= @corp_power %>
+    <br/><br/>
+    <img src="<%= @avatar %>">
   </div>
   <div class="panel-footer"><%= link_to 'Create a whole superhero team', home_team_path%></div>
 </div>
