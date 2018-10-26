@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>THE SUPERPOWER GENERATOR</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -12,6 +13,11 @@
   <body>
 
     <%= render 'home/navbar'%>
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
+    <br/><br/>
+    <br/><br/>
+    <center>Copyright TENKOI corporation 2018</center>
   </body>
 </html>
