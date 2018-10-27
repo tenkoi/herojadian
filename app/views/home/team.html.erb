@@ -1,10 +1,40 @@
 
+<br/>
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3 class="panel-title"><%= link_to 'Click here to generate Superhero', root_path%></h3>
+    <h3 class="panel-title grey">How Many Team Members Do You Want?</h3>
   </div>
   <div class="panel-body">
-    <%= @name %>
+    <div class="row">
+      <br/>
+      <div class="col-md-4">
+        <%= form_tag home_team_path, :method => 'POST' do %>
+
+        <%= select_tag(:team_number, option_for_select([
+          ['1',1],
+          ['2',2],
+          ['3',3],
+          ['4',4],
+          ['5',5],
+          ['6',6],
+          ['7',7],
+          ['8',8],
+          ['9',9],
+          ['10',10],
+          ]), class: 'form-control') %>
+
+          <%= submit_tag 'Build Your Team', class: "btn btn-success"%>
+        <% end %>
+
+      </div>
+      <div class="col-md-4">
+
+      </div>
+      <div class="col-md-4">
+
+      </div>
+
+    </div>
   </div>
   <div class="panel-footer"><%= link_to 'Create a whole superhero team', home_team_path%></div>
 </div>
